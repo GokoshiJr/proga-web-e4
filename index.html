@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="stylesheet" href="./src/css/grid.css" />
+    <title>E4 Programaci&oacute;n Web</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header sombra">
+        <h1>E4 - Progra Web</h1>
+      </header>
+      <aside class="aside sombra">
+        <ul class="no-style vertical">
+          <li><a href="#" onclick="mostrarDatos('E1')">Ejercicio 1</a></li>
+          <li><a href="#">Ejercicio 2</a></li>
+          <li><a href="#">Ejercicio 3</a></li>
+          <li><a href="#">Ejercicio 4</a></li>
+        </ul>
+      </aside>
+      <main class="main sombra"><h1 id="E1">Menu</h1></main>
+      <footer class="footer sombra">
+        <h1>UJAP 2020-2CR Ing en Computacion</h1>
+      </footer>
+    </div>
+
+    <script>
+      function mostrarDatos(id) {
+        mensaje = document.getElementById(id);
+        if (id === 'E1') {
+          msg = 'e1';
+        }
+        mensaje.innerHTML = msg;
+      }
+      mostrarDatos('Hola mundo');
+    </script>
+  </body>
+</html>
