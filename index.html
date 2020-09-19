@@ -15,26 +15,16 @@
       <aside class="aside sombra">
         <ul class="no-style vertical">
           <li><a href="#" onclick="mostrarDatos('E1')">Ejercicio 1</a></li>
-          <li><a href="#">Ejercicio 2</a></li>
-          <li><a href="#">Ejercicio 3</a></li>
-          <li><a href="#">Ejercicio 4</a></li>
+          <li><a href="#" onclick="mostrarDatos('E2')">Ejercicio 2</a></li>
+          <li><a href="#" onclick="mostrarDatos('E3')">Ejercicio 3</a></li>
+          <li><a href="#" onclick="mostrarDatos('E4')">Ejercicio 4</a></li>
         </ul>
       </aside>
-      <main class="main sombra"><h1 id="E1">Menu</h1></main>
+      <main class="main sombra"><h1 id="mostrar">Menu</h1></main>
       <footer class="footer sombra">
         <h1>UJAP 2020-2CR Ing en Computacion</h1>
       </footer>
     </div>
-
-    <script>
-      function mostrarDatos(id) {
-        mensaje = document.getElementById(id);
-        if (id === 'E1') {
-          msg = 'e1';
-        }
-        mensaje.innerHTML = msg;
-      }
-      mostrarDatos('Hola mundo');
-    </script>
+    <script src="./src/js/main.js"></script>
   </body>
 </html>
