@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/css/styles.css" />
     <link rel="stylesheet" href="./src/css/grid.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <title>E4 Programaci&oacute;n Web</title>
   </head>
   <body>
@@ -14,13 +18,20 @@
       </header>
       <aside class="aside sombra">
         <ul class="no-style vertical">
-          <li><a href="#" onclick="mostrarDatos('E1')">Ejercicio 1</a></li>
-          <li><a href="#" onclick="mostrarDatos('E2')">Ejercicio 2</a></li>
-          <li><a href="#" onclick="mostrarDatos('E3')">Ejercicio 3</a></li>
-          <li><a href="#" onclick="mostrarDatos('E4')">Ejercicio 4</a></li>
+          <li><a onclick="mostrarDatos('E')">Inicio</a></li>
+          <li><a onclick="mostrarDatos('E1','e1.html')">Ejercicio 1</a></li>
+          <li><a onclick="mostrarDatos('E2','e2.html')">Ejercicio 2</a></li>
+          <li><a onclick="mostrarDatos('E3','e3.html')">Ejercicio 3</a></li>
+          <li><a onclick="mostrarDatos('E4','e4.html')">Ejercicio 4</a></li>
         </ul>
       </aside>
-      <main class="main sombra"><p id="mostrar">Menu</p></main>
+      <main class="main sombra">
+        <p id="mostrar">
+          Bienvenidos a la Evaluacion 4 de Programacion Web. Por favor
+          seleccione un ejercicio de la nav de arriba y para ir a ejecutarlo,
+          presione el boton (run)
+        </p>
+      </main>
       <footer class="footer sombra">
         <h1>UJAP 2020-2CR Ing en Computacion</h1>
       </footer>
