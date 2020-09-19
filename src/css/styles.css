@@ -13,6 +13,10 @@ header h1 {
   padding: 0;
 }
 
+aside {
+  background-color: #da7808;
+}
+
 .vertical a {
   text-decoration: none;
   display: block;
@@ -21,8 +25,8 @@ header h1 {
   text-align: center;
   margin: auto;
   padding: 10px;
-  font-size: 22px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .vertical a:hover,
@@ -30,4 +34,12 @@ header h1 {
   background-color: #bb6707;
   color: #000000;
   text-decoration: none;
+}
+
+#mostrar {
+  margin: 0;
+  padding: 10px;
+  font-size: 24px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: justify;
 }
