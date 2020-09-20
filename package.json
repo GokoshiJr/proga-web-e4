@@ -1,7 +1,7 @@
 {
-  "name": "evaluacion4",
+  "name": "goko-progra-web-e4-express",
   "version": "1.0.0",
-  "description": "",
+  "description": "Evaluacion 4 de programacion web, con un ejemplo de express incluido",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.5.2",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
     "morgan": "^1.10.0"

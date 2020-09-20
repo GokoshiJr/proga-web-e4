@@ -1,24 +1,30 @@
 const express = require('express');
+const morgan = require('morgan'); // middleware
 const app = express();
-const port = 3000;
 
-// middlewares, funciona para cualquier ruta, parecido al app.all
+// Settings
+app.set('appName', 'Gokoshi Express Example'); // setieamos una varible appName
+app.set('port', 3000);
+// Motor de plantillas, nos ayudan a extender el html,
+// cuando queremos mostrar en la pantalla los datos de una base de datos
+app.set('view engine', 'ejs');
+
+// renderizamos el ejs, en la ruta view
+app.get('/view', (req, res) => {
+  // ejemplo de base de datos
+  const data = [
+    {name: 'Alejandro'},
+    {name: 'Andres'},
+    {name: 'Enrique'},
+    {name: 'Jainny'},
+  ];
+  res.render('index.ejs', {people: data});
+});
+
+// Middlewares, funciona para cualquier ruta, parecido al app.all
 // manejador de peticion que ejecutamos antes de que lleguen a su ruta original
-
-function logger(req, res, next) {
-  // registrar las peticiones cuando lleguen al servidor
-  console.log(
-    `Route received: ${req.protocol}://${req.get('host')}${req.originalUrl}`
-  );
-  next();
-}
-
-// express ahora puede entender los json, que se le envian al servidor
-
-app.use(express.json());
-app.use(logger);
-
-// middlewares deben ir antes de las rutas
+app.use(express.json()); // express ahora puede entender los json, que se le envian al servidor
+app.use(morgan('dev')); // middleware morgan, como un logger
 
 // para cualquier ruta user, primero deben pasar por el all
 app.all('/user', (req, res, next) => {
@@ -55,6 +61,7 @@ app.delete('/user/:userId', (req, res) => {
 // servicio de archivos estaticos
 app.use(express.static('./'));
 
-app.listen(port, () => {
-  console.log(`Server on port ${port}`);
+app.listen(app.get('port'), () => {
+  console.log(app.get('appName')); // get de la variable appName
+  console.log(`Server on port ${app.get('port')}`);
 });
