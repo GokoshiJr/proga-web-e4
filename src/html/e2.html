@@ -31,29 +31,25 @@
                 type="number"
                 class="form-control"
                 id="num1"
-                aria-describedby="emailHelp"
-                placeholder="Number 1"
+                placeholder="number 1"
               />
               <input
                 type="number"
                 class="form-control"
                 id="num2"
-                aria-describedby="emailHelp"
-                placeholder="Number 2"
+                placeholder="number 2"
               />
               <input
                 type="number"
                 class="form-control"
                 id="num3"
-                aria-describedby="emailHelp"
-                placeholder="Number 3"
+                placeholder="number 3"
               />
               <input
                 type="number"
                 class="form-control"
                 id="num4"
-                aria-describedby="emailHelp"
-                placeholder="Number 4"
+                placeholder="number 4"
               />
             </div>
 
@@ -62,16 +58,16 @@
               class="btn btn-primary"
               onclick="mostrarListas()"
             >
-              Submit
+              Enviar
             </button>
           </div>
 
           <div class="grid-mostrar" id="numeros">
             <h2>Estadisticas</h2>
             <h3 id="pares">Pares: 0, Impares: 0</h3>
-            <h3 id="primos">Primos:0, No Primos: 0</h3>
-            <h3 id="estatus">Positivos:0, Negativos:0, Neutros:0</h3>
-            <h3 id="multiplo2">Multiplos de dos:0</h3>
+            <h3 id="primos">Primos: 0, No Primos: 0</h3>
+            <h3 id="estatus">Positivos: 0, Negativos : 0, Neutros: 0</h3>
+            <h3 id="multiplo2">Multiplos de dos: 0</h3>
           </div>
         </div>
       </main>
@@ -85,16 +81,67 @@
         const num2 = document.getElementById('num2').value;
         const num3 = document.getElementById('num3').value;
         const num4 = document.getElementById('num4').value;
-
         let elementos = [num1, num2, num3, num4];
+
         let repetidos = elementosRepetidos(elementos);
+
         if (repetidos.length >= 1) {
-          document.getElementById('pares').innerHTML = `Iguales: ${repetidos}`;
+          document.getElementById(
+            'pares'
+          ).innerHTML = `Error (Numeros repetidos)`;
         } else {
-          document.getElementById('pares').innerHTML = `Adelante`;
+          let numPar = pares(elementos);
+          let primo = primos(num1) + primos(num2) + primos(num3) + primos(num4);
+          let noPrimo = 4 - primo;
+          let estatusNum = estatus(elementos);
+          document.getElementById(
+            'pares'
+          ).innerHTML = `Pares: ${numPar[0]}, Impares: ${numPar[1]}`;
+
+          document.getElementById('primos').innerHTML = `Primos: ${primo}
+          , No Primos: ${noPrimo}`;
+
+          document.getElementById(
+            'estatus'
+          ).innerHTML = `Positivos: ${estatusNum[0]}, Negativos : ${estatusNum[1]}, Neutros: ${estatusNum[2]}`;
+
+          document.getElementById(
+            'multiplo2'
+          ).innerHTML = `Multiplo de dos: ${numPar[0]}`;
         }
       };
 
+      const pares = (numberArray) => {
+        let par = 0;
+        let impar = 0;
+
+        numberArray.forEach((element) => {
+          if (element % 2 === 0) {
+            par++;
+          } else {
+            impar++;
+          }
+        });
+
+        let result = [par, impar];
+        return result;
+      };
+      const primos = (numero) => {
+        let divisible = 0;
+        let numero1 = Number(numero);
+        for (let i = 1; i < numero1 + 1; i++) {
+          if (numero1 % i === 0) {
+            divisible++;
+            // console.log(numero1);
+          }
+        }
+
+        if (divisible === 2) {
+          return true;
+        } else {
+          return false;
+        }
+      };
       function elementosRepetidos(elementos) {
         let repetidos = [];
         let temporal = [];
@@ -108,6 +155,26 @@
 
         return repetidos;
       }
+      const estatus = (numberArray) => {
+        let numeros = numberArray;
+        let positivos = 0;
+        let negativos = 0;
+        let neutros = 0;
+
+        for (let i = 0; i < numeros.length; i++) {
+          num = Number(numeros[i]);
+          if (num === 0) {
+            neutros++;
+          } else if (num > 0) {
+            positivos++;
+          } else {
+            negativos++;
+          }
+        }
+        let result = [positivos, negativos, neutros];
+        console.log(result);
+        return result;
+      };
     </script>
   </body>
 </html>
