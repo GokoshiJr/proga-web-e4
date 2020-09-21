@@ -1,0 +1,17 @@
+.grid-form {
+  padding: 10px;
+  grid-area: grid-form;
+}
+.grid-mostrar {
+  grid-area: grid-mostrar;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, auto);
+  grid-template-areas: 'grid-form  grid-mostrar  grid-mostrar';
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
