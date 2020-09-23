@@ -1,0 +1,52 @@
+.tictactoe {
+  height: 300px;
+  width: 310px;
+  background-color: grey;
+  font-size: 25px;
+  font-family: helvetica;
+  color: white;
+  grid-area: tabla;
+  align-items: center;
+  justify-content: center;
+}
+
+.tictactoe .row {
+  height: 100px;
+}
+
+.tictactoe .row:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.tictactoe .row .cell {
+  width: 110px;
+  height: 100px;
+  float: left;
+  text-align: center;
+  padding-top: 34px;
+}
+
+.tictactoe .row .cell:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+.estatus {
+  grid-area: estatus;
+}
+
+.boton {
+  grid-area: boton;
+}
+
+.grid {
+  max-width: 80%;
+  margin: 10px auto;
+  display: grid;
+  grid-gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    'estatus estatus tabla tabla'
+    'boton   boton   tabla tabla';
+}
