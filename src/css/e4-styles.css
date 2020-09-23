@@ -1,0 +1,26 @@
+.main {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    'fila1'
+    'fila2';
+}
+
+.fila1 {
+  padding: 10px;
+  margin: 10px auto;
+  border: 2px solid black;
+  grid-area: fila1;
+}
+.fila2 {
+  padding: 10px;
+  margin: 10px auto;
+  grid-area: fila2;
+  border: 2px solid black;
+}
+
+main div > h4 {
+  display: inline;
+}
