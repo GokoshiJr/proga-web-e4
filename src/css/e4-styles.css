@@ -1,26 +1,87 @@
+/* Declaracion Grid */
+.fila1 {
+  min-width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: fila1;
+}
+.fila2 {
+  grid-area: fila2;
+}
+.fila3 {
+  grid-area: fila3;
+}
+.fila4 {
+  grid-area: fila4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cabecera {
+  grid-area: cabecera;
+}
+.botones {
+  grid-area: botones;
+}
+.boton1 {
+  grid-area: boton1;
+}
+.boton2 {
+  grid-area: boton2;
+}
+/* Estructura Grid */
 .main {
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    'cabecera'
+    'fila2'
+    'fila3';
+}
+.cabecera {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, auto);
+  grid-template-areas: 'fila1 botones fila4';
+}
+.botones {
+  padding: 10px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2, auto);
   grid-template-areas:
-    'fila1'
-    'fila2';
+    'boton1'
+    'boton2';
 }
-
-.fila1 {
+/* Estilos */
+.fila1,
+.fila2,
+.fila3,
+.fila4 {
+  min-width: 80%;
   padding: 10px;
   margin: 10px auto;
   border: 2px solid black;
-  grid-area: fila1;
+  font-size: 18px;
 }
-.fila2 {
+.boton1,
+.boton2 {
+  margin: 10px;
   padding: 10px;
-  margin: 10px auto;
-  grid-area: fila2;
-  border: 2px solid black;
+}
+#small1,
+#small2 {
+  font-size: 20px;
 }
 
-main div > h4 {
-  display: inline;
+#title1,
+#title2,
+#conversionOutput,
+#conversionInput {
+  font-size: 25px;
 }
