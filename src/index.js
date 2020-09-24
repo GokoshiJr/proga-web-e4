@@ -1,3 +1,4 @@
+// Ejemplo de servidor js con express.js
 const express = require('express');
 const morgan = require('morgan'); // middleware
 const app = express();

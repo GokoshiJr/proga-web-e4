@@ -109,3 +109,20 @@ const estatus = (numberArray) => {
   let result = [positivos, negativos, neutros];
   return result;
 };
+
+const limpiar = () => {
+  for (let i = 1; i < 5; i++) {
+    let num = document.getElementById(`num${i}`);
+    let $num = {num};
+    $num.num.value = 0;
+  }
+  document.getElementById('pares').innerHTML = `Pares: 0, Impares: 0`;
+
+  document.getElementById('primos').innerHTML = `Primos: 0, No Primos: 0`;
+
+  document.getElementById(
+    'estatus'
+  ).innerHTML = `Positivos: 0, Negativos : 0, Neutros: 0`;
+
+  document.getElementById('multiplo2').innerHTML = `Multiplo de dos: 0`;
+};

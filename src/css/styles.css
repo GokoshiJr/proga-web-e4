@@ -1,20 +1,25 @@
 * {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 .sombra {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
+
 header h1 {
   text-align: center;
 }
+
 .no-style {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
 aside {
   background-color: #da7808;
 }
+
 .vertical a {
   text-decoration: none;
   display: block;
@@ -26,12 +31,14 @@ aside {
   padding: 10px;
   font-size: 26px;
 }
+
 .vertical a:hover,
 .vertical a:active {
   background-color: #bb6707;
   color: #000000;
   text-decoration: none;
 }
+
 #mostrar {
   margin: 0;
   padding: 10px;
@@ -39,6 +46,7 @@ aside {
   min-height: 500px;
   text-align: center;
 }
+
 .container footer > h2 {
   margin: 10px;
 }

@@ -6,7 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "Javascript",
+    "Html",
+    "CSS",
+    "Express.js",
+    "Node.js"
+  ],
   "author": "Julio Gonzalez <julioagonzalez18@gmail.com>",
   "license": "MIT",
   "dependencies": {
