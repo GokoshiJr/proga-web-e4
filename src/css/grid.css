@@ -6,26 +6,24 @@
   padding: 10px;
   grid-area: header;
 }
-
 .container .aside {
   border-radius: 2px;
   grid-area: aside;
 }
-
 .container .main {
   border-radius: 2px;
   border: 5px solid #000000;
   grid-area: main;
 }
-
 .container .footer {
   background-color: chocolate;
   border-radius: 2px;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
   grid-area: footer;
 }
-
 /* Estructura Grid */
-
 .container {
   max-width: 70%;
   margin: 10px auto;

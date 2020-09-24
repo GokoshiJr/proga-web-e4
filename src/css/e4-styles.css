@@ -1,4 +1,5 @@
 /* Declaracion Grid */
+
 .fila1 {
   min-width: 90%;
   display: flex;
@@ -6,31 +7,40 @@
   align-items: center;
   grid-area: fila1;
 }
+
 .fila2 {
   grid-area: fila2;
 }
+
 .fila3 {
   grid-area: fila3;
 }
+
 .fila4 {
   grid-area: fila4;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
+
 .cabecera {
   grid-area: cabecera;
 }
+
 .botones {
   grid-area: botones;
 }
+
 .boton1 {
   grid-area: boton1;
 }
+
 .boton2 {
   grid-area: boton2;
 }
+
 /* Estructura Grid */
+
 .main {
   max-width: 100%;
   display: grid;
@@ -41,6 +51,7 @@
     'fila2'
     'fila3';
 }
+
 .cabecera {
   max-width: 100%;
   display: grid;
@@ -48,6 +59,7 @@
   grid-template-rows: repeat(1, auto);
   grid-template-areas: 'fila1 botones fila4';
 }
+
 .botones {
   padding: 10px;
   margin: 10px;
@@ -58,7 +70,9 @@
     'boton1'
     'boton2';
 }
+
 /* Estilos */
+
 .fila1,
 .fila2,
 .fila3,
@@ -69,11 +83,13 @@
   border: 2px solid black;
   font-size: 18px;
 }
+
 .boton1,
 .boton2 {
   margin: 10px;
   padding: 10px;
 }
+
 #small1,
 #small2 {
   font-size: 20px;

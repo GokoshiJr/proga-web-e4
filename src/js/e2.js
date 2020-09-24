@@ -4,7 +4,6 @@ const mostrarListas = () => {
   const num3 = document.getElementById('num3').value;
   const num4 = document.getElementById('num4').value;
   let elementos = [num1, num2, num3, num4];
-
   let repetidos = elementosRepetidos(elementos);
 
   if (repetidos.length >= 1) {
@@ -15,6 +14,7 @@ const mostrarListas = () => {
     let noPrimo = 4 - primo;
     let estatusNum = estatus(elementos);
     let multiplos = multiplo2(elementos);
+
     document.getElementById(
       'pares'
     ).innerHTML = `Pares: ${numPar[0]}, Impares: ${numPar[1]}`;
@@ -39,6 +39,7 @@ const multiplo2 = (numberArray) => {
       multiplo++;
     }
   });
+
   return multiplo;
 };
 

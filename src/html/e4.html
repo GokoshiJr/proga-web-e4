@@ -6,10 +6,7 @@
     <link rel="stylesheet" href="../css/grid.css" />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/e4-styles.css" />
-    <link
-      rel="stylesheet"
-      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <title>Programaci&oacute;n Web</title>
   </head>
   <body>
@@ -17,13 +14,14 @@
       <header class="header sombra">
         <h1>Ejercicio 4 - Conversiones</h1>
       </header>
-
       <aside class="aside sombra">
         <ul class="no-style vertical">
           <li><a href="../../index.html">Regresar</a></li>
+          <li>
+            <a href="https://github.com/GokoshiJr/proga-web-e4">Repositorio</a>
+          </li>
         </ul>
       </aside>
-
       <main class="main sombra">
         <div class="cabecera">
           <div class="fila1">
@@ -35,10 +33,9 @@
                 id="conversionInput"
                 value="0"
               />
-              <small class="form-text text-muted" id="small2">Unidad:</small>
+              <small class="form-text text-muted" id="small1">Unidad:</small>
             </div>
           </div>
-
           <div class="fila4">
             <div class="form-group">
               <label id="title2" for="conversionOutput">Salida</label>
@@ -48,10 +45,9 @@
                 id="conversionOutput"
                 value="0"
               />
-              <small id="small1" class="form-text text-muted">Unidad:</small>
+              <small id="small2" class="form-text text-muted">Unidad:</small>
             </div>
           </div>
-
           <div class="botones">
             <button onclick="conversion()" class="btn btn-dark boton1">
               Calcular
@@ -61,10 +57,8 @@
             </button>
           </div>
         </div>
-
         <div class="fila2">
           <h4>DE:</h4>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -77,7 +71,6 @@
               >Segundos</label
             >
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -89,7 +82,6 @@
               >Minutos</label
             >
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -99,7 +91,6 @@
             />
             <label class="custom-control-label" for="fila1_radio3">Horas</label>
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -107,9 +98,10 @@
               name="fila1_activado"
               class="custom-control-input"
             />
-            <label class="custom-control-label" for="fila1_radio4">Dias</label>
+            <label class="custom-control-label" for="fila1_radio4"
+              >D&iacute;as</label
+            >
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -121,7 +113,6 @@
               >Semanas</label
             >
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -131,7 +122,6 @@
             />
             <label class="custom-control-label" for="fila1_radio6">Meses</label>
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -139,11 +129,11 @@
               name="fila1_activado"
               class="custom-control-input"
             />
-            <label class="custom-control-label" for="fila1_radio7">Anos</label>
+            <label class="custom-control-label" for="fila1_radio7"
+              >A&ntilde;os</label
+            >
           </div>
         </div>
-
-        <!-- Fila 2 -->
         <div class="fila3">
           <h4>A:</h4>
           <div class="custom-control custom-radio custom-control-inline">
@@ -158,7 +148,6 @@
               >Segundos</label
             >
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -170,7 +159,6 @@
               >Minutos</label
             >
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -180,7 +168,6 @@
             />
             <label class="custom-control-label" for="fila2_radio3">Horas</label>
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -188,9 +175,10 @@
               name="fila2_activado"
               class="custom-control-input"
             />
-            <label class="custom-control-label" for="fila2_radio4">Dias</label>
+            <label class="custom-control-label" for="fila2_radio4"
+              >D&iacute;as</label
+            >
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -202,7 +190,6 @@
               >Semanas</label
             >
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -212,7 +199,6 @@
             />
             <label class="custom-control-label" for="fila2_radio6">Meses</label>
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input
               type="radio"
@@ -220,134 +206,16 @@
               name="fila2_activado"
               class="custom-control-input"
             />
-            <label class="custom-control-label" for="fila2_radio7">Anos</label>
+            <label class="custom-control-label" for="fila2_radio7"
+              >A&ntilde;os</label
+            >
           </div>
         </div>
       </main>
       <footer class="footer sombra">
-        <h1>UJAP 2020-2CR Ing en Computacion</h1>
+        <h2>UJAP 2020-2CR Ing en Computaci&oacute;n</h2>
       </footer>
     </div>
-    <script>
-      const calcular = () => {
-        //console.log($input);
-        //console.log($input.value);
-        //console.log($output);
-        // $output.value = 13;
-        let entrada = $input.value;
-        let fila2 = cargarFilas('2');
-        let fila1 = cargarFilas('1');
-
-        let activo1 = quienActivo(fila1);
-        let activo2 = quienActivo(fila2);
-        //console.log(activo1);
-        //console.log(activo2);
-        let salida = operaciones(activo1, activo2, entrada);
-        return salida;
-      };
-
-      const operaciones = (activo1, activo2, entrada) => {
-        let result = 0;
-        console.log(activo1);
-        let sec = segundos(activo1, entrada);
-        console.log(sec);
-        if (getUnidad(activo1) === getUnidad(activo2)) {
-          result = entrada;
-          console.log(getUnidad(activo2));
-        }
-        return result;
-      };
-      const cargarFilas = (fila) => {
-        let checkboxFila = [];
-        let radio;
-        for (let i = 0; i < 7; i++) {
-          radio = document.getElementById(`fila${fila}_radio${i + 1}`);
-          // console.log(aux);
-          checkboxFila[i] = {radio};
-        }
-        return checkboxFila;
-      };
-      const quienActivo = (arrayRadio) => {
-        //console.log(arrayRadio);
-        arrayRadio[0].acceptHola = 'Hola pepe';
-        let id = '';
-        for (let i = 0; i < 7; i++) {
-          if (arrayRadio[i].radio.checked == true) {
-            // console.log(arrayRadio[i].radio.id);
-            id = arrayRadio[i].radio.id;
-            arrayRadio[i].fila = id.slice(4, 5);
-            arrayRadio[i].radio = id.slice(11, 12);
-            return {fila: arrayRadio[i].fila, radio: arrayRadio[i].radio};
-            /* console.log(id.slice(11, 12)); */
-          }
-        }
-      };
-      const limpiar = () => {
-        $output.value = 0;
-        $input.value = 0;
-      };
-      const getUnidad = ({radio}) => {
-        let unidad = '';
-        switch (radio) {
-          case '1':
-            unidad = 'Segundos';
-            break;
-          case '2':
-            unidad = 'Minutos';
-            break;
-          case '3':
-            unidad = 'Horas';
-            break;
-          case '4':
-            unidad = 'Dias';
-            break;
-          case '5':
-            unidad = 'Semanas';
-            break;
-          case '6':
-            unidad = 'Meses';
-            break;
-          case '7':
-            unidad = 'Years';
-            break;
-        }
-        return unidad;
-      };
-      const segundos = ({radio}, entrada) => {
-        let result = 0;
-        switch (radio) {
-          case '1':
-            result = entrada;
-            break;
-          case '2':
-            result = entrada * 60;
-            break;
-          case '3':
-            result = entrada * 60 * 60;
-            break;
-          case '4':
-            result = entrada * 60 * 60 * 24;
-            break;
-          case '5':
-            result = entrada * 60 * 60 * 24 * 7;
-            break;
-          case '6':
-            result = entrada * 60 * 60 * 24 * 7 * 4.345238095;
-            break;
-          case '7':
-            result = entrada * 60 * 60 * 24 * 7 * 4.345238095 * 12;
-            break;
-        }
-        return result;
-      };
-      let $input = document.getElementById('conversionInput');
-      let $output = document.getElementById('conversionOutput');
-
-      const conversion = () => {
-        let result = calcular();
-        console.log(result);
-        $output.value = result;
-      };
-    </script>
+    <script src="../js/e4.js"></script>
   </body>
 </html>

@@ -3,6 +3,7 @@
   grid-area: grid-form;
 }
 .grid-mostrar {
+  padding: 20px;
   grid-area: grid-mostrar;
 }
 .grid-container {
