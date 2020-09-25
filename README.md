@@ -1,7 +1,12 @@
 # progra-web-e4
 
-Repository of the evaluation four, web programming, html,css and js are used. Plus: an example of express.js<br/> 
+Repository of the evaluation four, web programming, html,css and js are used. 
+</br>**Plus:** an example of express.js
 **To see the website click here [progra-web-e4](https://progra-web-e4.000webhostapp.com/)**.
+
+## Preview
+
+![alt view](https://github.com/GokoshiJr/proga-web-e4/blob/master/progra-web-e4-cap.png?raw=true)
 
 ## Install
 
