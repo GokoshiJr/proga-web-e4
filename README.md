@@ -20,7 +20,7 @@ If someone wants to add or improve something, I invite you to collaborate direct
 
 ## License
 
-progra-web-e2 is released under the [MIT License](https://opensource.org/licenses/MIT).
+progra-web-e4 is released under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Resources
 
